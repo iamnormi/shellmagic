@@ -1,0 +1,2 @@
+# shellmagic
+ShellMagic
