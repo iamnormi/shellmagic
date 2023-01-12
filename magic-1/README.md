@@ -1,4 +1,4 @@
-# Shell Script: Read line in file
+# Shell Script: Read lines in file
 https://stackoverflow.com/questions/21478334/shell-script-read-line-in-file
 
 ```
