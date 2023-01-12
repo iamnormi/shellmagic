@@ -8,6 +8,7 @@ while read line; do
 done < "paths.txt"
 ```
 # RegEx: Cheetsheet
+https://regexr.com/#native_link#
 ```
 Character classes:
 .	any character except newline
