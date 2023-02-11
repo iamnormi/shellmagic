@@ -110,3 +110,21 @@ https://stackoverflow.com/help
 https://chat.stackoverflow.com
 https://meta.stackoverflow.com 
 ```
+## Repairing bootloader for debian based distros 
+```
+-# mount /dev/sdaX /mnt
+-# mount /dev/sdaX /mnt/boot/efi
+-# mount --bind /dev /mnt/dev
+-# mount --bind /dev/pts /mnt/dev/pts
+-# mount --bind /proc /mnt/proc
+-# mount --bind /sys /mnt/sys
+-# chroot /mnt
+-# grub-install /dev/sda or -# grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
+-# update-grub or -# sudo grub-mkconfig -o /boot/grub/grub.cfg
+-# exit
+-# umount /mnt/dev/pts
+-# umount /mnt/dev
+-# umount /mnt/proc
+-# umount /mnt/sys
+-# umount /mnt
+```
