@@ -74,23 +74,23 @@ http://www.google.com.au
 ```
 $ cat urls.html | grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*" | sort -u
 ```
-
-* grep -E : is the same as egrep
-* grep -o : only outputs what has been grepped
-* (http|https) : is an either / or
-* a-z : is all lower case
-* A-Z : is all upper case
-* . : is dot
-* / : is the slash
-* ? : is ?
-* = : is equal sign
-* _ : is underscore
-* % : is percentage sign
-* : : is colon
-* - : is dash
-* * : is repeat the [...] group
-* sort -u : will sort & remove any duplicates
-
+```
+-> grep -E : is the same as egrep
+-> grep -o : only outputs what has been grepped
+-> (http|https) : is an either / or
+-> a-z : is all lower case
+-> A-Z : is all upper case
+-> . : is dot
+-> / : is the slash
+-> ? : is ?
+-> = : is equal sign
+-> _ : is underscore
+-> % : is percentage sign
+-> : : is colon
+-> - : is dash
+-> * : is repeat the [...] group
+-> sort -u : will sort & remove any duplicates
+```
 ## URL as input
 ```
 $ wget -qO- https://stackoverflow.com/ | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*" | sort -u
