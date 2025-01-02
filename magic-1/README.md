@@ -40,3 +40,17 @@ a{1,3}	between one & three
 a+?a{2,}?	match as few as possible
 ab|cd	match ab or cd
 ```
+# How to Configure Auto-Login in Arch Linux?
+## Edit the file
+```
+sudo vim /etc/systemd/system/getty.target.wants/getty@tty1.service
+```
+## default line look like (Manual login)
+```
+ExecStart=-/sbin/agetty -o '-- \\u' --noreset --noclear - ${TERM}
+```
+## For Autologin
+type current user at USER
+```
+ExecStart=-/sbin/agetty -a USER  - ${TERM}
+```
